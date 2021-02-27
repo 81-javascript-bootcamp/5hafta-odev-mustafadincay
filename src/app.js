@@ -72,14 +72,6 @@ class PomodoroApp {
     });
   }
 
-  removeTasksTable() {
-    getDataFromApi().then((currentTasks) => {
-      currentTasks.forEach((task, index) => {
-        this.deleteTaskToTable(task, index - 1);
-      });
-    });
-  }
-
   init() {
     this.fillTasksTable();
     this.handleAddTask();
